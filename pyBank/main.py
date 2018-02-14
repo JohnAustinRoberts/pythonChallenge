@@ -1,7 +1,8 @@
+#Don't forget to import csv!
 import csv
 
-
-#Final Expected Ouptut Result 
+#This is what I'm aiming for:
+#Expected Output Result 
 # Financial Analysis
 # ----------------------------
 # Total Months: 25
