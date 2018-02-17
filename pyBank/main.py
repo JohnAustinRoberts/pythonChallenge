@@ -18,13 +18,20 @@ import csv
 #   # ...for example, printing out data in the column "Name" for each row would be:
 #   print(row["Date"])
 
-f = open("raw_data/budget_data_2.csv")
+f = open("raw_data/budget_data_1.csv")
 reader = csv.DictReader(f)
-data = [row for row in reader]
+# data = [row for row in reader]
+
 dates = []
 revenues = []
 totalRevenue = 0
 avgChange = []
+
+
+g = open("raw_data/budget_data_2.csv")
+reader2 = csv.DictReader(g)
+data2 = [row for row in reader2]
+
 
 print("Financial Analysis")
 print("---------------------------")
@@ -36,7 +43,7 @@ print("---------------------------")
 #so that it will print.
 
 #for loop to go through the csv 
-for row in data:
+for row in reader:
 	#then append each month to the dates list
 	dates.append((row["Date"]))
 #nicely formatted total months
@@ -51,7 +58,7 @@ print("Total Months: " + str(len(dates)))
 #our results to the console.
 
 #for loop to go through the csv
-for row in data:
+for row in reader:
 	#then append each revenue to the revenues list
 	revenues.append((row["Revenue"]))
 #convert revenues from strings to integers
